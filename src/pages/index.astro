@@ -1,0 +1,225 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const title = "Inicio";
+---
+
+<Layout>
+  <div class="destacados">
+    <h2 class="titulo-destacados">Productos destacados</h2>
+    <div class="productos-container">
+      <div class="destacado">
+        <a href="/keyboards" class="dimgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/38c939a9f46d3fe133b197c5e3da4a2f_97212bab-c4fb-41a8-916f-8418930644f6_720x.jpg?v=1695188550"
+            alt="KBD8 MKXII"
+          />
+        </a>
+
+        <p>KBD8 MKXII</p>
+      </div>
+
+      <div class="destacado">
+        <a href="/keycaps" class="dimgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/Confettis_Base_02_781220a5-edb4-40c7-ab10-7c2c7ded564a_720x.jpg?v=1740467167"
+            alt="PBTfans Confettis"
+          />
+        </a>
+
+        <p>PBTfans Confettis</p>
+      </div>
+
+      <div class="destacado">
+        <a href="/switches" class="dimgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/13_da83686a-c5bd-46c2-9a8e-65e68d0b22ec_720x.jpg?v=1705480301"
+            alt="Gateron G Pro 3.0 Blue Clicky Switches"
+          />
+        </a>
+
+        <p>Gateron G Pro 3.0 Blue Clicky Switches</p>
+      </div>
+
+      <div class="destacado">
+        <a href="/keyboards" class="dimgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/GT80-__02_720x.jpg?v=1737451951"
+            alt="GT-80 Case"
+          />
+        </a>
+
+        <p>Gateron G Pro 3.0 Blue Clicky Switches</p>
+      </div>
+    </div>
+  </div>
+  <section class="productos">
+    <div class="pool-productos">
+      <div class="productos-main">
+        <a href="/keyboards" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/3_8c442181-41cb-4491-8a9e-fb28c6bb70a7_720x.jpg?v=1740721175"
+            alt="Margo con PBTfans 1950"
+          />
+        </a>
+        <p>Margo con PBTfans 1950</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/keycaps" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/12_0dde8425-ef42-47a2-966b-e4fa7ed9d307_720x.jpg?v=1740459857"
+            alt="Ichiraku Ramen R2 Cherry profile Keycaps"
+          />
+        </a>
+        <p>Ichiraku Ramen R2 Cherry profile Keycaps</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/switches" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/2_b3f9809c-c385-4ce5-a1b6-27c1dbfbb40b_720x.png?v=1727585054"
+            alt="GEON Raw HE Magnetic Switches"
+          />
+        </a>
+        <p>GEON Raw HE Magnetic Switches</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/keyboards" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/Odin_R3_aaf2b08d-af5f-4929-a19d-30d52b8d1ed5_720x.jpg?v=1708398427"
+            alt="KBDfans Odin R4 Mechanical Keyboard Kit"
+          />
+        </a>
+        <p>KBDfans Odin R4 Mechanical Keyboard Kit</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/keycaps" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/PT28-1_720x.jpg?v=1687748154"
+            alt="PBTfans Rōnin"
+          />
+        </a>
+        <p>PBTfans Rōnin</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/switches" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/1_6412e444-08cd-4fa2-91f7-cf9acc3a5b27_720x.jpg?v=1738909673"
+            alt="Naevies EC Switches"
+          />
+        </a>
+        <p>Naevies EC Switches</p>
+      </div>
+
+      <div class="productos-main">
+        <a href="/keyboards" class="pImgContainer">
+          <img
+            src="https://kbdfans.com/cdn/shop/files/1_a18ba3eb-1c11-4a25-bee0-27966a8f6715_720x.jpg?v=1735543767"
+            alt="Snake60 R2 Dark Green"
+          />
+        </a>
+        <p>Snake60 R2 Dark Green</p>
+      </div>
+    </div>
+  </section>
+  <style>
+    .destacados {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(32, 32, 32);
+      padding-bottom: 20px;
+    }
+
+    .productos-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .titulo-destacados {
+      color: white;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .destacado {
+      display: flex;
+      margin-top: 20px;
+      padding: 2px;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dimgContainer {
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+    }
+
+    .dimgContainer img {
+      width: 850px;
+      display: block;
+      height: auto;
+      border-radius: 20px;
+    }
+
+    .destacado p {
+      text-align: center;
+      margin-top: 10px;
+      width: 100%;
+      color: white;
+    }
+
+    .productos {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgb(32, 32, 32);
+      padding: 0 10% 20px;
+    }
+
+    .pool-productos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .productos-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 20px;
+      padding: 10px;
+    }
+
+    .pImgContainer {
+      display: inline-block;
+      justify-content: center;
+      align-items: center;
+      width: auto;
+    }
+    .pImgContainer img {
+      width: 300px;
+      display: block;
+      height: auto;
+      border-radius: 30px;
+    }
+
+    .productos-main p {
+      text-align: center;
+      margin-top: 10px;
+      color: white;
+      width: 40%;
+    }
+  </style>
+</Layout>

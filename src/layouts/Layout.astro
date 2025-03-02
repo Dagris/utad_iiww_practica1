@@ -1,0 +1,162 @@
+---
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sideBar" id="sideBar">
+        <button class="closeBtn" id="closeSideBar">✖️</button>
+        <nav>
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/keyboards">Teclados</a></li>
+            <li><a href="/keycaps">Teclas</a></li>
+            <li><a href="/swtiches">Switches</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <header class="topbar">
+        <button class="openBtn" id="openSideBar">🟰</button>
+        <a href="/"><div class="logo">⌨️</div></a>
+        <input type="text" placeholder="Buscar..." class="searchBar" />
+        <div class="user">🧑‍🦱</div>
+        <div class="cart">🛒</div>
+      </header>
+
+      <main class="content">
+        <slot />
+      </main>
+    </div>
+
+    <script>
+      const sidebar = document.getElementById("sideBar");
+      const openBtn = document.getElementById("openSideBar");
+      const closeBtn = document.getElementById("closeSideBar");
+
+      openBtn.addEventListener("click", () => {
+        sidebar.classList.add("show");
+      });
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.remove("show");
+      });
+    </script>
+
+    <style>
+      @import url("https://fonts.google.com/specimen/Roboto");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto;
+      }
+
+      .layout {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .logo {
+        font-size: 4rem;
+        margin-right: auto;
+      }
+
+      a {
+        outline: none;
+        border: none;
+      }
+
+      .sideBar {
+        position: fixed;
+        left: -250px;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: rgb(25, 25, 25);
+        padding: 20px;
+        transition: left 0.3s ease-in-out;
+      }
+
+      .sideBar.show {
+        left: 0;
+      }
+
+      .sideBar nav ul {
+        list-style: none;
+        margin-top: 50px;
+      }
+
+      .sideBar nav ul li {
+        margin: 15px 0;
+      }
+
+      .sideBar nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .closeBtn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+      }
+
+      /* Header */
+      .topbar {
+        display: flex;
+        align-items: center;
+        background-color: rgb(25, 25, 25);
+        padding: 0px 10px;
+      }
+
+      .openBtn {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
+
+      .searchBar {
+        flex-grow: 0.5;
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .user {
+        font-size: 2rem;
+        border-radius: 50%;
+      }
+
+      .cart {
+        font-size: 2rem;
+        border-radius: 50%;
+      }
+
+      /* Contenido */
+      .content {
+        padding: 0;
+      }
+    </style>
+  </body>
+</html>
